@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun Farica Sita Nurani!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">𝑀𝑦 𝑙𝑜𝑣𝑒 🌍♥️🫵🏻</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Beranda 🏠</a></li>
+                    <li><a href="#gallery">Galeri Foto & Video 🖼️</a></li>
+                    <li><a href="#messages">Ucapan & Doa 🙏</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1 class="wave-text">
+                        <span class="main-greeting">Happy Birthday</span>
+                        <span class="birthday-person-name">My Boo ❤️❤️</span>
+                    </h1>
+                    <p>Ada banyak cara untuk mencintai, tapi caraku mencintaimu adalah dengan seluruh hati dan jiwaku. Kamu adalah duniaku.</p>
+                    <button id="playMusicBtn">Putar Lagu</button>
+                    <audio id="birthdaySong" src="audio/christina perri - a thousand years ( slowed + reverb ).mp3" loop></audio>
+                </div>
+                <div class="hero-image-container">
+                    <img src="images/foto81.jpg" alt="Foto Utama Farica Sita Nurani">
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <h2>Jelajahi Galeri Momen Kami ♥‿♥</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item" id="kenangan1">
+                        <img src="images/foto1.jpg" alt="Kenangan 1 - Cantikkk nyaaa Akuuuuu 🩷">
+                        <p>Cantikkk nyaaa Akuuuuu 🩷</p>
+                    </div>
+                    <div class="gallery-item" id="kenangan2">
+                        <img src="images/kebunbinatang18.jpg" alt="Kenangan 2 - Main ke Kebun Binatang">
+                        <p>Main Ke Kebun Binatang</p>
+                    </div>
+                    <div class="gallery-item" id="kenangan3">
+                        <img src="images/foto72.jpg" alt="Kenangan 3 - Aku dan Kamuuu">
+                        <p>Aku dan Kamuuu</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="upload-video-section">
+            <h3>Galeri Video 🎥</h3>
+            <form id="cloudinaryVideoForm">
+                <input type="url" id="cloudinaryVideoURL" placeholder="Tempel URL video dari Cloudinary..." required>
+                <button type="submit">Tambahkan Video</button>
+            </form>
+            <div id="videoGallery" class="video-gallery"></div>
+        </section>
+
+
+        <section id="messages" class="messages-section">
+            <div class="container">
+                <h2>Kirimkan Ucapan & Doa Terbaikmu 🦋🦋</h2>
+                <form id="messageForm" class="message-form">
+                    <input type="text" id="senderName" placeholder="Nama Anda" required>
+                    <textarea id="messageText" placeholder="Tuliskan ucapan selamat ulang tahun Anda di sini..." rows="5" required></textarea>
+                    <button type="submit">Kirim Ucapan</button>
+                </form>
+
+                <div class="received-messages">
+                    <h3>Ucapan Penuh Cinta 🫶</h3>
+                    <div id="messagesList" class="messages-grid">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">PERAYAAN ULTAH FARICA!</div>
+            <p>&copy; 2025 Farica Sita Nurani. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <div id="galleryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <div class="modal-body" id="modalPhotos">
+                </div>
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <div id="toast" class="toast">Ucapan berhasil dikirim!</div>
+
+    <!-- Modal Video -->
+    <div id="videoModal" class="modal">
+    <div class="modal-content video-modal-content">
+        <span class="close-button">&times;</span>
+        <video id="modalVideo" controls autoplay></video>
+        <div class="modal-controls">
+        <button id="prevVideoBtn">⏮ Prev</button>
+        <button id="nextVideoBtn">Next ⏭</button>
+        <button id="exitVideoBtn" class="exit-button">Keluar</button>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
